@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cx } from "@/lib/cx";
+import Logo from "./Logo";
 import styles from "./Intro.module.css";
 
 const SEEN_KEY = "mayave_intro_seen";
@@ -60,7 +61,7 @@ export default function Intro() {
     >
       <div className={styles.center}>
         <div className={styles.line} />
-        <div className={styles.word}>MAYAVÉ</div>
+        <Logo tone="light" className={styles.word} />
         <div className={styles.sub}>Conscious modern luxury</div>
       </div>
       <div className={styles.enter}>Enter</div>

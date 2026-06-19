@@ -1,3 +1,4 @@
+import Logo from "./Logo";
 import styles from "./Footer.module.css";
 
 const social = [
@@ -11,7 +12,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <div>
-          <div className={styles.brand}>MAYAVÉ</div>
+          <Logo tone="light" className={styles.logo} />
           <p className={styles.tagline}>
             Conscious modern luxury. Lab-grown diamonds, set free — born in
             Surat.

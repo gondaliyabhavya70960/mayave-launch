@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  width: auto; /* paired with a height set by the caller to keep aspect ratio */
+}
+
+/* Recolor the black wordmark to pure white for dark backgrounds. */
+.light {
+  filter: brightness(0) invert(1);
+}

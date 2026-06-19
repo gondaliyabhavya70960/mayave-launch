@@ -45,11 +45,8 @@
 }
 
 .word {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(40px, 12vw, 62px);
-  color: #fff;
-  padding-left: 0.24em;
+  height: clamp(44px, 11vw, 64px);
+  margin: 0 auto;
   animation: mayIntroWord 1.5s cubic-bezier(0.16, 0.84, 0.44, 1) 0.35s both;
 }
 

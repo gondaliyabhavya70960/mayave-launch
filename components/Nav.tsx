@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { cx } from "@/lib/cx";
 import JoinButton from "./JoinButton";
+import Logo from "./Logo";
 import styles from "./Nav.module.css";
 
 /** Sticky top nav that slides in once the hero has scrolled past. */
@@ -31,7 +32,7 @@ export default function Nav() {
 
   return (
     <nav className={cx(styles.nav, show && styles.show)} inert={!show}>
-      <div className={styles.brand}>MAYAVÉ</div>
+      <Logo tone="dark" className={styles.logo} />
       <JoinButton variant="red">Join the Circle</JoinButton>
     </nav>
   );
