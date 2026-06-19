@@ -1,0 +1,34 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px clamp(20px, 5vw, 48px);
+  background: rgba(251, 248, 244, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(26, 18, 19, 0.08);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition:
+    transform 0.55s cubic-bezier(0.16, 0.84, 0.44, 1),
+    opacity 0.55s ease;
+}
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: 0.26em;
+  color: var(--ink);
+  padding-left: 0.26em;
+}

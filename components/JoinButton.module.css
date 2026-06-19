@@ -1,0 +1,45 @@
+.btn {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 0;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.white {
+  background: #fff;
+  color: var(--ink);
+  padding: 18px 38px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.white:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.red {
+  background: var(--red);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 11px;
+}
+.red:hover {
+  background: var(--ink);
+}
+
+.outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 14px 30px;
+  font-size: 11px;
+}
+.outline:hover {
+  background: var(--ink);
+  color: #fff;
+}
