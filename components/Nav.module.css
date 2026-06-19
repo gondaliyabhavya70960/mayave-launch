@@ -25,7 +25,7 @@
 }
 
 .brand {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 500;
   font-size: 21px;
   letter-spacing: 0.26em;

@@ -16,7 +16,7 @@
 }
 
 .title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 500;
   font-size: clamp(30px, 5vw, 46px);
   line-height: 1.18;
@@ -39,7 +39,7 @@
 }
 
 .colTitle {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 500;
   font-size: 25px;
   color: #fff;

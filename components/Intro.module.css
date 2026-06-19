@@ -45,7 +45,7 @@
 }
 
 .word {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 500;
   font-size: clamp(40px, 12vw, 62px);
   color: #fff;
@@ -55,7 +55,7 @@
 
 .sub {
   margin-top: 24px;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 12px;
   letter-spacing: 0.42em;
   text-transform: uppercase;
@@ -69,7 +69,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 11px;
   letter-spacing: 0.34em;
   text-transform: uppercase;
