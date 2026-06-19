@@ -1,0 +1,196 @@
+/* ============================================================
+   MAYAVÉ — global tokens, resets, keyframes, design-system
+   utilities. Component-specific layout lives in *.module.css.
+   ============================================================ */
+
+:root {
+  /* Brand palette (from the Mayavé launch design) */
+  --cream: #fbf8f4;
+  --red: #8d0124;
+  --red-soft: #aa182c;
+  --ink: #1a1213;
+  --muted: #7a6e6c;
+  --gold: #d8b15e;
+  --gold-light: #f4e7ce;
+  --placeholder: #efe9e1;
+
+  /* Footer tones */
+  --footer-text: #cabfbb;
+  --footer-dim: #8a7d79;
+  --footer-faint: #7a6e6a;
+
+  /* Type families — the variables are injected by next/font on <html> */
+  --font-serif: var(--font-bodoni), "Bodoni Moda", Georgia, serif;
+  --font-sans: var(--font-jost), "Jost", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
+  /* Fluid rhythm */
+  --pad-x: clamp(24px, 5vw, 48px);
+  --pad-y: clamp(92px, 12vw, 160px);
+  --maxw: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--red);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- Shared design-system utilities ---------- */
+
+.may-section {
+  padding: var(--pad-y) var(--pad-x);
+}
+
+.may-container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.may-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--red-soft);
+  font-weight: 500;
+}
+
+.may-eyebrow--light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.may-serif {
+  font-family: var(--font-serif);
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes mayIntroLine {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes mayIntroWord {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.55em;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.24em;
+    transform: none;
+  }
+}
+
+@keyframes mayIntroSub {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: none;
+  }
+}
+
+@keyframes mayFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes mayHint {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes mayScrollDot {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(22px);
+    opacity: 0;
+  }
+}
+
+/* ---------- Progressive enhancement & accessibility ---------- */
+
+/* Without JS the scroll-reveal observer never runs, so make sure all
+   content is visible. */
+.no-js [data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-parallax] {
+    transform: none !important;
+  }
+}

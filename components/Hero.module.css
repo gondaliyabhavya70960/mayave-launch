@@ -1,0 +1,145 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--red);
+}
+
+.bg {
+  position: absolute;
+  inset: -8% 0;
+}
+
+.bgImg {
+  object-fit: cover;
+}
+
+.washHorizontal,
+.washVertical {
+  position: absolute;
+  inset: 0;
+}
+
+.washHorizontal {
+  background: linear-gradient(
+    100deg,
+    rgba(141, 1, 36, 0.93) 0%,
+    rgba(141, 1, 36, 0.74) 36%,
+    rgba(170, 24, 44, 0.28) 62%,
+    rgba(170, 24, 44, 0) 85%
+  );
+}
+
+.washVertical {
+  background: linear-gradient(
+    0deg,
+    rgba(26, 18, 19, 0.4) 0%,
+    rgba(26, 18, 19, 0) 30%
+  );
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 64px) var(--pad-x);
+}
+
+.copy {
+  max-width: 620px;
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.28em;
+  color: #fff;
+  padding-left: 0.28em;
+  margin-bottom: 42px;
+}
+
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 26px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.04;
+  font-size: clamp(42px, 8vw, 74px);
+  color: #fff;
+  margin: 0 0 30px;
+}
+
+.lede {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 42px;
+  max-width: 480px;
+}
+
+/* Staggered entrance */
+.in1 {
+  animation: mayFadeUp 1s cubic-bezier(0.16, 0.84, 0.44, 1) 0.1s both;
+}
+.in2 {
+  animation: mayFadeUp 1s cubic-bezier(0.16, 0.84, 0.44, 1) 0.25s both;
+}
+.in3 {
+  animation: mayFadeUp 1.1s cubic-bezier(0.16, 0.84, 0.44, 1) 0.4s both;
+}
+.in4 {
+  animation: mayFadeUp 1.1s cubic-bezier(0.16, 0.84, 0.44, 1) 0.55s both;
+}
+.in5 {
+  animation: mayFadeUp 1.1s cubic-bezier(0.16, 0.84, 0.44, 1) 0.7s both;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scrollLabel {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.scrollTrack {
+  position: relative;
+  width: 1px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+.scrollDot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 14px;
+  background: #fff;
+  animation: mayScrollDot 2s ease infinite;
+}

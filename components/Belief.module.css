@@ -1,0 +1,28 @@
+.belief {
+  background: var(--cream);
+}
+
+.inner {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.statement {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.28;
+  color: var(--ink);
+  margin: 40px 0;
+  text-wrap: balance;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.95;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}

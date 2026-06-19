@@ -1,0 +1,49 @@
+.house {
+  background: var(--cream);
+}
+
+.grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 7vw, 96px);
+  align-items: center;
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--placeholder);
+}
+
+.img {
+  object-fit: cover;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.12;
+  color: var(--ink);
+  margin: 30px 0;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.95;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  margin: 0 0 26px;
+}
+
+.body:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

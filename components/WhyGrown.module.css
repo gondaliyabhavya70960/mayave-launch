@@ -1,0 +1,61 @@
+.why {
+  background: var(--red);
+  color: #fff;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.head {
+  max-width: 760px;
+  margin: 0 auto 88px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.18;
+  color: #fff;
+  margin: 34px 0 0;
+  text-wrap: balance;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(40px, 5vw, 56px);
+}
+
+.rule {
+  width: 36px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 26px;
+}
+
+.colTitle {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.colBody {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
