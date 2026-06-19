@@ -1,19 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Jost } from "next/font/google";
 import "./globals.css";
-
-const bodoni = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  display: "swap",
-  variable: "--font-bodoni",
-});
-
-const jost = Jost({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-jost",
-});
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -66,8 +52,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bodoni.variable} ${jost.variable} no-js`}>
+    <html lang="en" className="no-js">
       <body>
+        <link
+          rel="preconnect"
+          href="https://use.typekit.net"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/ouk6mfp.css"
+          precedence="default"
+        />
         <script
           // Swap `no-js` → `js` before paint so scroll-reveal elements only
           // start hidden when JavaScript is available to reveal them again.

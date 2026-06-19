@@ -19,10 +19,12 @@
   --footer-dim: #8a7d79;
   --footer-faint: #7a6e6a;
 
-  /* Type families — the variables are injected by next/font on <html> */
-  --font-serif: var(--font-bodoni), "Bodoni Moda", Georgia, serif;
-  --font-sans: var(--font-jost), "Jost", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  /* Type families — loaded from Adobe Fonts (Typekit kit ouk6mfp).
+     Multiple candidate family slugs are listed so the first one the kit
+     actually publishes wins, with web-safe fallbacks after. */
+  --font-display: "acumin-pro", "Helvetica Neue", Arial, sans-serif; /* titles & headers */
+  --font-body: "semplicita", "semplicita-pro", "Helvetica Neue", Arial,
+    sans-serif; /* regular / body text */
 
   /* Fluid rhythm */
   --pad-x: clamp(24px, 5vw, 48px);
@@ -45,7 +47,7 @@ body {
 body {
   background: var(--cream);
   color: var(--ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -78,7 +80,7 @@ img {
 }
 
 .may-eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 12px;
   letter-spacing: 0.34em;
   text-transform: uppercase;
@@ -91,7 +93,7 @@ img {
 }
 
 .may-serif {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
 }
 
 /* ---------- Keyframes ---------- */
