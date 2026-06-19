@@ -52,13 +52,8 @@
   max-width: 620px;
 }
 
-.wordmark {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 24px;
-  letter-spacing: 0.28em;
-  color: #fff;
-  padding-left: 0.28em;
+.logo {
+  height: 36px;
   margin-bottom: 42px;
 }
 
