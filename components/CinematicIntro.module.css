@@ -1,0 +1,51 @@
+.cinematic {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+  /* slow cinematic settle */
+  animation: cinematicZoom 24s ease-out both;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      120% 85% at 50% 28%,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(26, 18, 19, 0.35) 0%,
+      rgba(26, 18, 19, 0) 28%,
+      rgba(26, 18, 19, 0.55) 100%
+    );
+}
+
+@keyframes cinematicZoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img {
+    animation: none;
+  }
+}

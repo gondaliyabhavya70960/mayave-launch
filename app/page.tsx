@@ -1,5 +1,6 @@
 import Intro from "@/components/Intro";
 import Nav from "@/components/Nav";
+import CinematicIntro from "@/components/CinematicIntro";
 import Hero from "@/components/Hero";
 import Belief from "@/components/Belief";
 import Atmosphere from "@/components/Atmosphere";
@@ -19,6 +20,7 @@ export default function Home() {
       <Intro />
       <Nav />
       <main>
+        <CinematicIntro />
         <Hero />
         <Belief />
         <Atmosphere />
