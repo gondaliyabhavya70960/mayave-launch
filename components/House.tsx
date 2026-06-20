@@ -22,15 +22,16 @@ export default function House() {
         </Reveal>
         <Reveal direction="right">
           <div>
-            <div className="may-eyebrow">The House</div>
-            <h2 className={styles.title}>Cut in the city of diamonds.</h2>
+            <div className="may-eyebrow">Made for her</div>
+            <h2 className={styles.title}>The meaning was always hers.</h2>
             <p className={styles.body}>
-              Surat cuts and polishes nine of every ten diamonds the world
-              wears. Mayavé is born of that city — and of the Dholakia bench,
-              four decades deep in the craft of releasing light from stone.
+              For generations, the diamond carried a meaning it was given, not
+              chosen — a proposal, an occasion, someone else’s idea of what it
+              should represent.
             </p>
             <p className={styles.body}>
-              What we make is new. The hands that make it are not.
+              We make diamonds for the woman who already knows what things mean
+              to her. No one decides for her — because she chose.
             </p>
           </div>
         </Reveal>

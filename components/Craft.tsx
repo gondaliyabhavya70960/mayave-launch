@@ -31,7 +31,7 @@ const steps: Step[] = [
   {
     no: "03",
     title: "The cut",
-    body: "On the Surat bench, facets find their angles by hand.",
+    body: "At the bench, facets find their angles by hand.",
     image: craft3,
   },
   {

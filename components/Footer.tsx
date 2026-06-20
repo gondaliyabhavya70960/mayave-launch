@@ -14,8 +14,8 @@ export default function Footer() {
         <div>
           <Logo tone="light" className={styles.logo} />
           <p className={styles.tagline}>
-            Conscious modern luxury. Lab-grown diamonds, set free — born in
-            Surat.
+            A new definition of desire. Lab-grown diamonds, made for her —
+            Noida · Ghaziabad · Gurugram.
           </p>
         </div>
         <nav className={styles.social} aria-label="Social and contact">

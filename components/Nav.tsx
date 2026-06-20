@@ -33,7 +33,7 @@ export default function Nav() {
   return (
     <nav className={cx(styles.nav, show && styles.show)} inert={!show}>
       <Logo tone="dark" className={styles.logo} />
-      <JoinButton variant="red">Join the Circle</JoinButton>
+      <JoinButton variant="red">Request First Look</JoinButton>
     </nav>
   );
 }

@@ -7,9 +7,9 @@ export default function TheLine() {
       <div className={styles.inner}>
         <Reveal>
           <p className={styles.statement}>
-            We did not find this light.
+            The future —
             <br />
-            We made it.
+            with a touch of magic.
           </p>
         </Reveal>
       </div>

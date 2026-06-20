@@ -8,34 +8,35 @@ const siteUrl =
     : "http://localhost:3000");
 
 const description =
-  "A new house of conscious modern luxury, born in Surat. Lab-grown diamonds, set in recycled 18K gold — brilliance that asks nothing of the earth it came from.";
+  "A new definition of desire. Mayavé makes lab-grown diamond jewellery for a generation that doesn’t ask permission to redefine luxury — with homes in Noida, Ghaziabad and Gurugram.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Mayavé — Conscious Modern Luxury",
+    default: "Mayavé — A New Definition of Desire",
     template: "%s · Mayavé",
   },
   description,
   keywords: [
     "Mayavé",
+    "Mayavérse",
     "lab-grown diamonds",
-    "recycled gold",
-    "conscious luxury",
-    "Surat jewellery",
     "fine jewellery",
+    "luxury jewellery",
+    "Noida jewellery",
+    "Gurugram jewellery",
   ],
   authors: [{ name: "Mayavé" }],
   openGraph: {
     type: "website",
     siteName: "Mayavé",
-    title: "Mayavé — Conscious Modern Luxury",
+    title: "Mayavé — A New Definition of Desire",
     description,
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mayavé — Conscious Modern Luxury",
+    title: "Mayavé — A New Definition of Desire",
     description,
   },
 };

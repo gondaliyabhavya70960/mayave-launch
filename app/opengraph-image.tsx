@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Mayavé — Conscious Modern Luxury";
+export const alt = "Mayavé — A New Definition of Desire";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -52,7 +52,7 @@ export default function OpengraphImage() {
             color: "rgba(255,255,255,0.85)",
           }}
         >
-          CONSCIOUS MODERN LUXURY
+          A NEW DEFINITION OF DESIRE
         </div>
       </div>
     ),

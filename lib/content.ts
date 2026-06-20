@@ -3,41 +3,39 @@ import floracious from "@/assets/images/product-floracious.jpg";
 import lumen from "@/assets/images/product-lumen.jpg";
 import presDuCoeur from "@/assets/images/product-pres-du-coeur.jpg";
 
-export interface Product {
-  kind: string;
-  name: string;
+export interface Pillar {
+  /** Short label shown above the headline. */
+  label: string;
+  headline: string;
   tagline: string;
-  story: string;
+  body: string;
   image: StaticImageData;
-  /** Side the product image sits on for desktop layout. */
+  /** Side the image sits on for desktop layout. */
   imageSide: "left" | "right";
 }
 
-export const products: Product[] = [
+export const pillars: Pillar[] = [
   {
-    kind: "Rings",
-    name: "Floracious",
-    tagline: "Circles of life.",
-    story:
-      "A solitaire that opens like a bloom — petals of light around a single grown stone. Worn on the hand that builds a life.",
+    label: "Craft",
+    headline: "The beauty is in the details.",
+    tagline: "Worked until the light is right.",
+    body: "Every setting, every finish, every diamond — worked until the light falls exactly as it should. We don’t settle for a piece that almost works: multiple rounds, multiple rejections, until what survives couldn’t be made better.",
     image: floracious,
     imageSide: "left",
   },
   {
-    kind: "Earrings",
-    name: "Lumen",
-    tagline: "Light in motion.",
-    story:
-      "They catch the room and give it back. Diamonds suspended in reclaimed gold, made to move with you and never sit still.",
+    label: "Expression",
+    headline: "Designed to mesmerise.",
+    tagline: "Go further than you think.",
+    body: "We tell our designers to go further than they think — new forms, different proportions, shapes that haven’t been tried. Then one question: would she love to wear it? Everything starts there. Everything ends there too.",
     image: lumen,
     imageSide: "right",
   },
   {
-    kind: "Necklaces",
-    name: "Près du Cœur",
-    tagline: "Worn close.",
-    story:
-      "A line of light that rests where it means the most. Quiet enough for every day, rare enough for the ones that matter.",
+    label: "Experience",
+    headline: "Not a product. A feeling.",
+    tagline: "Somewhere you walk into.",
+    body: "The truest Mayavé is somewhere you walk into and get immersed in. Our spaces were made by people who understood that jewellery is not a product — it is a feeling. Every surface, every material, the warmth of every advisor carries it.",
     image: presDuCoeur,
     imageSide: "left",
   },

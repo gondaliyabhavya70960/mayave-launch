@@ -20,10 +20,12 @@ export default function TheReveal() {
       <div className={styles.wash} />
       <div className={styles.center}>
         <Reveal>
-          <div className="may-eyebrow may-eyebrow--light">The reveal</div>
+          <div className="may-eyebrow may-eyebrow--light">Expression</div>
         </Reveal>
         <Reveal delay={160}>
-          <p className={styles.line}>And then — the pieces themselves.</p>
+          <p className={styles.line}>
+            Most jewellery is made to be noticed. Ours, to mesmerise.
+          </p>
         </Reveal>
       </div>
     </section>

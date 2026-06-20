@@ -63,12 +63,12 @@ export default function JoinCircle() {
         <Reveal direction="left">
           <div>
             <div className="may-eyebrow may-eyebrow--light">
-              Join the Circle
+              Join the Mayavérse
             </div>
-            <h2 className={styles.title}>Be first through the doors.</h2>
+            <h2 className={styles.title}>Be first inside.</h2>
             <p className={styles.body}>
-              The Circle is our private list. Members get an early, quiet look
-              at every piece — and first access the moment pre-orders open.
+              The Mayavérse is our pre-launch list — the first to know when the
+              doors open, the first to see the pieces, the first inside.
             </p>
           </div>
         </Reveal>
@@ -79,11 +79,11 @@ export default function JoinCircle() {
               <div className={styles.star} aria-hidden="true">
                 ✦
               </div>
-              <h3 className={styles.successTitle}>You’re in the Circle.</h3>
+              <h3 className={styles.successTitle}>You’re on the list.</h3>
               <p className={styles.successBody}>
                 Thank you, {saved.name}. We’ll write to{" "}
-                <span className={styles.email}>{saved.email}</span> with your
-                first look — before anyone else.
+                <span className={styles.email}>{saved.email}</span> the moment
+                the doors open — before anyone else.
               </p>
             </div>
           ) : (
@@ -143,11 +143,11 @@ export default function JoinCircle() {
                 </label>
 
                 <button type="submit" className={styles.submit}>
-                  Join the Circle
+                  Request First Look
                 </button>
                 <p className={styles.fine}>
-                  No noise — only a quiet note when we open the doors.
-                  Unsubscribe anytime.
+                  No noise — just a quiet note when the doors open. Unsubscribe
+                  anytime.
                 </p>
               </div>
             </form>

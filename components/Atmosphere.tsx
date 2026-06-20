@@ -20,7 +20,7 @@ export default function Atmosphere() {
       <div className={styles.wash} />
       <div className={styles.center}>
         <Reveal>
-          <p className={styles.line}>A world of quiet light.</p>
+          <p className={styles.line}>Where the ordinary becomes extraordinary.</p>
         </Reveal>
       </div>
     </section>
