@@ -37,7 +37,7 @@ export default function CinematicIntro() {
         poster={poster.src}
         aria-hidden="true"
       >
-        <source src="/cinematic.mp4" type="video/mp4" />
+        <source src="/cinematic-loop.mp4" type="video/mp4" />
       </video>
       <div className={styles.vignette} />
     </section>
