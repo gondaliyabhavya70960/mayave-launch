@@ -27,11 +27,26 @@
   margin: 24px auto 0;
 }
 
+.mapWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(36px, 6vw, 56px);
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  max-width: 460px;
+  /* fade the rectangular edges into the red background */
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 60%, transparent 92%);
+  mask-image: radial-gradient(circle at 50% 45%, #000 60%, transparent 92%);
+}
+
 .cities {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(24px, 4vw, 48px);
-  margin-top: clamp(48px, 7vw, 72px);
+  margin-top: clamp(32px, 5vw, 48px);
 }
 
 .city {
