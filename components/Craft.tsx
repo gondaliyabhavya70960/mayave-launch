@@ -53,28 +53,40 @@ export default function Craft() {
           <Reveal delay={120}>
             <h2 className={styles.title}>From light to jewel.</h2>
           </Reveal>
+          <Reveal delay={200}>
+            <p className={styles.lede}>
+              Every Mayavé diamond walks the same path — from a sliver of carbon
+              to a jewel made to be worn.
+            </p>
+          </Reveal>
         </div>
-        <div className={styles.grid}>
+
+        <ol className={styles.steps}>
           {steps.map((step, i) => (
-            <Reveal key={step.no} delay={i * 120}>
-              <article className={styles.card}>
-                <div className={styles.frame}>
+            <li key={step.no} className={styles.step}>
+              <Reveal
+                direction={i % 2 === 0 ? "left" : "right"}
+                className={styles.mediaCol}
+              >
+                <div className={styles.media}>
                   <Image
                     src={step.image}
                     alt={`${step.title} — step ${step.no} of the Mayavé craft`}
                     fill
                     placeholder="blur"
-                    sizes="(max-width: 900px) 50vw, 25vw"
+                    sizes="(max-width: 860px) 90vw, 50vw"
                     className={styles.img}
                   />
                 </div>
-                <div className={styles.no}>{step.no}</div>
-                <h3 className={styles.cardTitle}>{step.title}</h3>
-                <p className={styles.cardBody}>{step.body}</p>
-              </article>
-            </Reveal>
+              </Reveal>
+              <Reveal delay={120} className={styles.textCol}>
+                <span className={styles.no}>{step.no}</span>
+                <h3 className={styles.stepTitle}>{step.title}</h3>
+                <p className={styles.stepBody}>{step.body}</p>
+              </Reveal>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

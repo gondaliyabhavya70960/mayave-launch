@@ -9,7 +9,8 @@
 
 .head {
   text-align: center;
-  margin-bottom: 88px;
+  max-width: 640px;
+  margin: 0 auto clamp(48px, 7vw, 92px);
 }
 
 .title {
@@ -18,60 +19,101 @@
   font-size: clamp(32px, 5vw, 48px);
   line-height: 1.12;
   color: var(--ink);
-  margin: 30px 0 0;
+  margin: 28px 0 0;
 }
 
-.grid {
+.lede {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin: 22px 0 0;
+}
+
+/* The four steps as an alternating editorial journey. */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 7vw, 96px);
+}
+
+.step {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
 }
 
-.frame {
+/* Mirror every second row so the journey zig-zags down the page. */
+.step:nth-child(even) .mediaCol {
+  order: 2;
+}
+.step:nth-child(even) .textCol {
+  order: 1;
+}
+
+.media {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   background: var(--placeholder);
-  margin-bottom: 24px;
 }
 
 .img {
   object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+
+.media:hover .img {
+  transform: scale(1.03);
 }
 
 .no {
-  font-family: var(--font-body);
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  color: var(--red-soft);
+  display: block;
+  font-family: var(--font-display);
   font-weight: 600;
-  margin-bottom: 12px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1;
+  color: var(--red-soft);
+  margin-bottom: 16px;
 }
 
-.cardTitle {
+.stepTitle {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 23px;
+  font-size: clamp(26px, 3.4vw, 38px);
+  line-height: 1.05;
   color: var(--ink);
-  margin: 0 0 10px;
+  margin: 0 0 14px;
 }
 
-.cardBody {
-  font-size: 14px;
-  line-height: 1.8;
+.stepBody {
+  font-size: 16px;
+  line-height: 1.9;
   color: var(--muted);
+  max-width: 380px;
   margin: 0;
 }
 
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+@media (max-width: 860px) {
+  .step {
+    grid-template-columns: 1fr;
+    gap: clamp(18px, 4vw, 26px);
+  }
+  /* On a single column, always show the image above its copy. */
+  .step:nth-child(even) .mediaCol,
+  .step:nth-child(even) .textCol {
+    order: 0;
+  }
+  .stepBody {
+    max-width: none;
   }
 }
 
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+@media (prefers-reduced-motion: reduce) {
+  .img {
+    transition: none;
   }
 }
