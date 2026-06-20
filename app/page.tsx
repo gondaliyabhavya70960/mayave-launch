@@ -8,6 +8,7 @@ import WhyGrown from "@/components/WhyGrown";
 import Craft from "@/components/Craft";
 import TheReveal from "@/components/TheReveal";
 import Products from "@/components/Products";
+import ProductSlider from "@/components/ProductSlider";
 import Locations from "@/components/Locations";
 import TheLine from "@/components/TheLine";
 import JoinCircle from "@/components/JoinCircle";
@@ -27,6 +28,7 @@ export default function Home() {
         <Craft />
         <TheReveal />
         <Products />
+        <ProductSlider />
         <Locations />
         <TheLine />
         <JoinCircle />

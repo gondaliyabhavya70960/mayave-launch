@@ -1,16 +1,34 @@
 .line {
   position: relative;
-  background: var(--ink);
-  padding: clamp(120px, 16vw, 200px) var(--pad-x);
   overflow: hidden;
+  padding: clamp(120px, 16vw, 200px) var(--pad-x);
+  /* A deep brand wash replaces the old stretched bird raster: red glow at the
+     top dissolving into ink, with a warmer lift from the bottom. */
+  background:
+    radial-gradient(
+      120% 130% at 50% -10%,
+      rgba(141, 1, 36, 0.62) 0%,
+      rgba(141, 1, 36, 0) 55%
+    ),
+    radial-gradient(
+      120% 120% at 50% 115%,
+      rgba(170, 24, 44, 0.32) 0%,
+      rgba(170, 24, 44, 0) 52%
+    ),
+    var(--ink);
 }
 
-.birds {
+/* Soft vignette to draw the eye to the centred line. */
+.line::after {
+  content: "";
   position: absolute;
   inset: 0;
-  object-fit: cover;
-  opacity: 0.14;
   pointer-events: none;
+  background: radial-gradient(
+    78% 70% at 50% 50%,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0.42) 100%
+  );
 }
 
 .inner {
@@ -19,6 +37,33 @@
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
+}
+
+/* A small, crisp flock built from the vector bird mark — a refined nod to the
+   brand motif instead of a grainy full-bleed image. */
+.flock {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: clamp(28px, 4vw, 46px);
+}
+
+.bird {
+  display: block;
+  width: 30px;
+  height: 10px;
+  background: linear-gradient(160deg, #fbf8f4 0%, #e8bdc5 58%, #aa182c 120%);
+  -webkit-mask: url(/bird.svg) center / contain no-repeat;
+  mask: url(/bird.svg) center / contain no-repeat;
+  opacity: 0.92;
+}
+
+/* Lift and enlarge the centre bird for a gentle flock arc. */
+.bird:nth-child(2) {
+  width: 40px;
+  height: 13px;
+  margin-bottom: 11px;
 }
 
 .statement {
