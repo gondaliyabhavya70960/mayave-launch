@@ -2,7 +2,6 @@ import Image from "next/image";
 import { cx } from "@/lib/cx";
 import heroImg from "@/assets/images/hero.jpg";
 import JoinButton from "./JoinButton";
-import Logo from "./Logo";
 import Parallax from "./Parallax";
 import styles from "./Hero.module.css";
 
@@ -25,8 +24,7 @@ export default function Hero() {
 
       <div className={styles.inner}>
         <div className={styles.copy}>
-          <Logo tone="light" priority className={cx(styles.logo, styles.in1)} />
-          <div className={cx(styles.kicker, styles.in2)}>
+          <div className={cx(styles.kicker, styles.in1)}>
             Lab-grown diamonds · The future, with a touch of magic
           </div>
           <h1 className={cx(styles.title, styles.in3)}>

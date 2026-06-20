@@ -1,22 +1,21 @@
 .footer {
   background: var(--ink);
   color: var(--footer-text);
-  padding: 80px var(--pad-x) 54px;
+  padding: clamp(56px, 8vw, 80px) var(--pad-x) 40px;
 }
 
 .top {
   max-width: var(--maxw);
   margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 48px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
 }
 
 .logo {
-  height: 40px;
-  margin-bottom: 20px;
+  height: 34px;
+  margin-bottom: 18px;
 }
 
 .tagline {
@@ -24,53 +23,93 @@
   line-height: 1.8;
   letter-spacing: 0.03em;
   color: var(--footer-dim);
-  max-width: 340px;
+  max-width: 300px;
   margin: 0;
 }
 
-.social {
-  display: flex;
-  gap: 32px;
-  align-items: center;
+.cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(24px, 3vw, 40px);
 }
 
-.socialLink {
+.colHead {
+  font-family: var(--font-body);
   font-size: 11px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.colLink {
+  font-size: 13px;
+  letter-spacing: 0.02em;
   color: var(--footer-text);
   transition: color 0.2s ease;
 }
 
-.socialLink:hover {
+.colLink:hover {
   color: #fff;
 }
 
-.legal {
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bottom {
   max-width: var(--maxw);
-  margin: 46px auto 0;
-  padding-top: 28px;
+  margin: clamp(40px, 6vw, 56px) auto 0;
+  padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--footer-faint);
 }
 
-.legalLinks {
+.legal {
   display: flex;
-  gap: 24px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 
 .legalLink {
+  font-size: 11px;
+  letter-spacing: 0.06em;
   color: var(--footer-faint);
   transition: color 0.2s ease;
 }
 
 .legalLink:hover {
   color: var(--footer-text);
+}
+
+.copy {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--footer-faint);
+}
+
+@media (max-width: 860px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
 }
