@@ -18,9 +18,8 @@ A cinematic, scroll-driven one-pager:
 7. **Expression** — a transition band ("…designed to mesmerise.").
 8. **The Mayavé way** — Craft · Experience · Expression.
 9. **Mayavérse** — the store locations (Noida, Ghaziabad, Gurugram).
-10. **The line** — "The future — with a touch of magic."
-11. **Join the Mayavérse** — a waitlist form with validation.
-12. **Footer**.
+10. **Join the Mayavérse** — a waitlist form with validation.
+11. **Footer**.
 
 ### Interactions
 

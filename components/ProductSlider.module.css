@@ -17,7 +17,6 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: clamp(32px, 5vw, 52px);
 }
 
 .title {
@@ -65,8 +64,26 @@
 }
 
 .arrow:disabled {
-  opacity: 0.25;
+  opacity: 0.22;
   cursor: default;
+}
+
+/* Scroll-progress rail — a clear signal the row is a slider. */
+.progress {
+  position: relative;
+  height: 2px;
+  background: rgba(26, 18, 19, 0.12);
+  margin: clamp(22px, 3vw, 32px) 0 clamp(28px, 4vw, 42px);
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform: scaleX(0.08);
+  background: var(--red);
+  transition: transform 0.18s ease-out;
 }
 
 .track {
@@ -139,10 +156,39 @@
   margin: 8px 0 0;
 }
 
-/* Touch users swipe the track, so the arrow controls are redundant. */
-@media (hover: none) {
-  .controls {
-    display: none;
+.discover {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    gap 0.2s ease;
+}
+
+.discover svg {
+  width: 13px;
+  height: 13px;
+}
+
+.card:hover .discover {
+  color: var(--red);
+  border-color: var(--red);
+  gap: 9px;
+}
+
+@media (max-width: 600px) {
+  .arrow {
+    width: 44px;
+    height: 44px;
   }
 }
 
@@ -150,7 +196,8 @@
   .track {
     scroll-behavior: auto;
   }
-  .img {
+  .img,
+  .progressFill {
     transition: none;
   }
 }

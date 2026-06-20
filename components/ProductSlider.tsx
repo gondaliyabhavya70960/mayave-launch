@@ -29,6 +29,7 @@ const products: Product[] = [
 
 export default function ProductSlider() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const fillRef = useRef<HTMLSpanElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
 
@@ -38,6 +39,10 @@ export default function ProductSlider() {
     const max = el.scrollWidth - el.clientWidth;
     setAtStart(el.scrollLeft <= 2);
     setAtEnd(el.scrollLeft >= max - 2);
+    if (fillRef.current) {
+      const p = max > 0 ? el.scrollLeft / max : 0;
+      fillRef.current.style.transform = `scaleX(${Math.max(0.08, p)})`;
+    }
   }, []);
 
   useEffect(() => {
@@ -97,6 +102,10 @@ export default function ProductSlider() {
           </div>
         </div>
 
+        <div className={styles.progress} aria-hidden="true">
+          <span ref={fillRef} className={styles.progressFill} />
+        </div>
+
         <div
           className={styles.track}
           ref={trackRef}
@@ -124,6 +133,10 @@ export default function ProductSlider() {
                 <div className={styles.kind}>{p.kind}</div>
                 <h3 className={styles.name}>{p.name}</h3>
                 <p className={styles.note}>{p.note}</p>
+                <span className={styles.discover}>
+                  Discover
+                  <Chevron dir="right" />
+                </span>
               </div>
             </a>
           ))}
