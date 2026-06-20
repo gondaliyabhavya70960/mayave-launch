@@ -1,4 +1,3 @@
-import Intro from "@/components/Intro";
 import Nav from "@/components/Nav";
 import CinematicIntro from "@/components/CinematicIntro";
 import Hero from "@/components/Hero";
@@ -17,7 +16,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Intro />
       <Nav />
       <main>
         <CinematicIntro />
