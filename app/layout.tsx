@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Cursor from "@/components/Cursor";
 import "./globals.css";
 
 const siteUrl =
@@ -74,6 +75,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Cursor />
       </body>
     </html>
   );
