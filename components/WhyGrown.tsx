@@ -19,7 +19,7 @@ const pillars = [
 
 export default function WhyGrown() {
   return (
-    <section className={cx("may-section", styles.why)}>
+    <section id="why" className={cx("may-section", styles.why)}>
       <div className={styles.inner}>
         <div className={styles.head}>
           <Reveal>

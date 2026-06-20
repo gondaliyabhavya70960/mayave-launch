@@ -6,7 +6,7 @@ import styles from "./House.module.css";
 
 export default function House() {
   return (
-    <section className={cx("may-section", styles.house)}>
+    <section id="about" className={cx("may-section", styles.house)}>
       <div className={styles.grid}>
         <Reveal direction="left">
           <div className={styles.frame}>
