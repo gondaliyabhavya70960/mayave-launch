@@ -1,0 +1,43 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-100px, -100px, 0);
+  will-change: transform;
+  transition: opacity 0.25s ease;
+}
+
+.bird {
+  display: block;
+  width: 34px;
+  height: 12px;
+  /* center the bird on the pointer position */
+  margin: -6px 0 0 -17px;
+  background-color: #fff;
+  -webkit-mask: url(/bird.svg) center / contain no-repeat;
+  mask: url(/bird.svg) center / contain no-repeat;
+  transform: scale(1);
+  transform-origin: center;
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+
+/* Light section underneath → ink-coloured bird. */
+.cursor[data-tone="light"] .bird {
+  background-color: var(--ink);
+}
+
+/* Over a link or button → enlarge for feedback. */
+.cursor[data-active="true"] .bird {
+  transform: scale(1.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bird {
+    transition: background-color 0.25s ease;
+  }
+}
