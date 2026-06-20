@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cx } from "@/lib/cx";
-import heroImg from "@/assets/images/hero.jpg";
+import heroImg from "@/assets/images/model.png";
 import JoinButton from "./JoinButton";
 import Parallax from "./Parallax";
 import styles from "./Hero.module.css";
@@ -11,7 +11,7 @@ export default function Hero() {
       <Parallax speed={0.12} className={styles.bg}>
         <Image
           src={heroImg}
-          alt="A lab-grown diamond solitaire ring on a dark rippled surface"
+          alt="A woman wearing Mayavé diamonds"
           fill
           priority
           placeholder="blur"

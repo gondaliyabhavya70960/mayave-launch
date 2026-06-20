@@ -14,6 +14,9 @@
 
 .bgImg {
   object-fit: cover;
+  object-position: center;
+  /* mirror so the model sits on the right, clear of the left-aligned copy */
+  transform: scaleX(-1);
 }
 
 .washHorizontal,
