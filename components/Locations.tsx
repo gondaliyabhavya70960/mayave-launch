@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cx } from "@/lib/cx";
-import mapIndia from "@/assets/images/map-india.png";
+import mapIndia from "@/assets/images/map-india-glow.png";
 import Reveal from "./Reveal";
 import styles from "./Locations.module.css";
 
