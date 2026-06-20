@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { cx } from "@/lib/cx";
-import floracious from "@/assets/images/product-floracious.jpg";
-import lumen from "@/assets/images/product-lumen.jpg";
-import presDuCoeur from "@/assets/images/product-pres-du-coeur.jpg";
+import ring from "@/assets/images/product-ring.png";
+import earrings from "@/assets/images/product-earrings.png";
+import bracelet from "@/assets/images/product-bracelet.png";
 import Reveal from "./Reveal";
 import styles from "./Products.module.css";
 
@@ -10,12 +10,12 @@ const sideFeatures = [
   {
     name: "Asymmetry Drops",
     tagline: "Defy convention.",
-    image: presDuCoeur,
+    image: earrings,
   },
   {
     name: "The Stacking Suite",
     tagline: "More is more.",
-    image: lumen,
+    image: bracelet,
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Products() {
             <a href="#join-the-circle" className={styles.large}>
               <div className={styles.largeMedia}>
                 <Image
-                  src={floracious}
+                  src={ring}
                   alt="The Architect Cuff — a statement Mayavé piece"
                   fill
                   placeholder="blur"

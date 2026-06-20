@@ -1,5 +1,5 @@
 import Image from "next/image";
-import revealImg from "@/assets/images/reveal.jpg";
+import revealImg from "@/assets/images/interior.jpg";
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
 import styles from "./TheReveal.module.css";
@@ -10,7 +10,7 @@ export default function TheReveal() {
       <Parallax speed={0.18} className={styles.bg}>
         <Image
           src={revealImg}
-          alt="A finished Mayavé piece catching the light"
+          alt="Inside the Mayavé space"
           fill
           placeholder="blur"
           sizes="100vw"

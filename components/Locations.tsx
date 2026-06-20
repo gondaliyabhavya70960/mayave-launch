@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { cx } from "@/lib/cx";
+import mapIndia from "@/assets/images/map-india.png";
 import Reveal from "./Reveal";
 import styles from "./Locations.module.css";
 
@@ -17,8 +19,20 @@ export default function Locations() {
         <Reveal delay={200}>
           <p className={styles.body}>
             A world where jewellery feels connected and personal. Step into the
-            Mayavérse at one of our homes across the city.
+            Mayavérse at one of our homes across Delhi NCR.
           </p>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <div className={styles.mapWrap}>
+            <Image
+              src={mapIndia}
+              alt="Map of India with Mayavé's Delhi NCR locations marked"
+              className={styles.map}
+              sizes="(max-width: 600px) 80vw, 460px"
+              placeholder="blur"
+            />
+          </div>
         </Reveal>
 
         <div className={styles.cities}>

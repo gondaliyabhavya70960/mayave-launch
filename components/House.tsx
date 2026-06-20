@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cx } from "@/lib/cx";
-import houseImg from "@/assets/images/house.jpg";
+import model from "@/assets/images/model.png";
 import Reveal from "./Reveal";
 import styles from "./House.module.css";
 
@@ -11,8 +11,8 @@ export default function House() {
         <Reveal direction="left">
           <div className={styles.frame}>
             <Image
-              src={houseImg}
-              alt="Diamonds being inspected at the atelier bench"
+              src={model}
+              alt="A woman wearing Mayavé"
               fill
               placeholder="blur"
               sizes="(max-width: 860px) 100vw, 50vw"
