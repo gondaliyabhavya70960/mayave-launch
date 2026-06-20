@@ -1,0 +1,156 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  padding: var(--pad-y) 0;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad-x);
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(32px, 5vw, 52px);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.12;
+  color: var(--ink);
+  margin: 18px 0 0;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.arrow {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(26, 18, 19, 0.25);
+  background: transparent;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.2s ease;
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.arrow:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.track {
+  display: flex;
+  gap: clamp(16px, 2vw, 24px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 clamp(244px, 76vw, 332px);
+  scroll-snap-align: start;
+  display: block;
+  color: inherit;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--placeholder);
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+
+.card:hover .img {
+  transform: scale(1.04);
+}
+
+.meta {
+  padding-top: 18px;
+}
+
+.kind {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--red-soft);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0;
+}
+
+.note {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+/* Touch users swipe the track, so the arrow controls are redundant. */
+@media (hover: none) {
+  .controls {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    scroll-behavior: auto;
+  }
+  .img {
+    transition: none;
+  }
+}

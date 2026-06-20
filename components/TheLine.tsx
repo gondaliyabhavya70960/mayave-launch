@@ -1,21 +1,18 @@
-import Image from "next/image";
-import birds from "@/assets/images/bird-pattern.png";
 import Reveal from "./Reveal";
 import styles from "./TheLine.module.css";
 
 export default function TheLine() {
   return (
     <section className={styles.line}>
-      <Image
-        src={birds}
-        alt=""
-        aria-hidden="true"
-        fill
-        sizes="100vw"
-        className={styles.birds}
-      />
       <div className={styles.inner}>
         <Reveal>
+          <div className={styles.flock} aria-hidden="true">
+            <span className={styles.bird} />
+            <span className={styles.bird} />
+            <span className={styles.bird} />
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
           <p className={styles.statement}>
             The future —
             <br />
