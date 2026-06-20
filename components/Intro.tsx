@@ -62,7 +62,7 @@ export default function Intro() {
       <div className={styles.center}>
         <div className={styles.line} />
         <Logo tone="light" className={styles.word} />
-        <div className={styles.sub}>Conscious modern luxury</div>
+        <div className={styles.sub}>A new definition of desire</div>
       </div>
       <div className={styles.enter}>Enter</div>
     </div>

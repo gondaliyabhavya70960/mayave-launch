@@ -7,19 +7,19 @@ export default function Belief() {
     <section className={cx("may-section", styles.belief)}>
       <div className={styles.inner}>
         <Reveal>
-          <div className="may-eyebrow">Our belief</div>
+          <div className="may-eyebrow">The future, with a touch of magic</div>
         </Reveal>
         <Reveal delay={120}>
           <p className={styles.statement}>
-            Beauty should ask nothing of the earth it came from.
+            Jewellery has spent centuries telling women who they are. We asked
+            them instead.
           </p>
         </Reveal>
         <Reveal delay={240}>
           <p className={styles.body}>
-            Mayavé exists for a generation that refuses the old trade-off
-            between conscience and desire. Every stone is grown, every gram of
-            gold reclaimed — so the only thing rare about our jewellery is the
-            way it makes you feel.
+            Rarity used to decide what was possible. With the advent of
+            lab-grown diamonds, it doesn’t anymore — so we started designing
+            around her.
           </p>
         </Reveal>
       </div>

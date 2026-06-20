@@ -4,16 +4,16 @@ import styles from "./WhyGrown.module.css";
 
 const pillars = [
   {
-    title: "Atom for atom",
-    body: "Chemically, optically, physically a diamond — graded to the very same standard. Indistinguishable, even to the loupe.",
+    title: "Liberation",
+    body: "Traditional diamonds limited how they could be set. Grown stones let us design past that — craftsmanship that was never possible before, now within reach.",
   },
   {
-    title: "No earth moved",
-    body: "No mines, no scarred land, no displaced communities. A fraction of the carbon, and not a gram of doubt.",
+    title: "Artistry",
+    body: "Luxury used to mean distance. We bridge it — what was once inaccessible, made accessible. All the bells and whistles, none of the baggage.",
   },
   {
-    title: "Traceable",
-    body: "Born in days, in a place we can name. Every stone accountable, from first spark to final setting.",
+    title: "Inclusivity",
+    body: "Jewellery for the woman of today, not an occasion someone else picked. Made personal. Made hers.",
   },
 ];
 
@@ -23,12 +23,11 @@ export default function WhyGrown() {
       <div className={styles.inner}>
         <div className={styles.head}>
           <Reveal>
-            <div className="may-eyebrow may-eyebrow--light">Why grown</div>
+            <div className="may-eyebrow may-eyebrow--light">What changed</div>
           </Reveal>
           <Reveal delay={120}>
             <h2 className={styles.title}>
-              Identical in every way that matters. Different in every way that
-              counts.
+              Rarity used to decide what was possible. It doesn’t anymore.
             </h2>
           </Reveal>
         </div>

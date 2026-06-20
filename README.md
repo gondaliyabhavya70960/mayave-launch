@@ -1,26 +1,27 @@
 # Mayavé — Launch Site
 
-A single-page launch / pre-registration site for **Mayavé**, a house of
-conscious modern luxury born in Surat: lab-grown diamonds set in recycled 18K
-gold. Built with Next.js (App Router) and React, implemented from a Claude
-Design export.
+A single-page launch / pre-registration site for **Mayavé** — "a new
+definition of desire": lab-grown diamond jewellery made for her, with homes in
+Noida, Ghaziabad and Gurugram. Built with Next.js (App Router) and React,
+implemented from a Claude Design export with copy from the brand's Canva.
 
 ## The page
 
 A cinematic, scroll-driven one-pager:
 
 1. **Intro** — a full-screen cinematic wordmark shown once per session.
-2. **Hero** — "Light, made—not mined." over a parallax film.
-3. **Our belief** — the brand's conscience statement.
-4. **Atmosphere** — a full-bleed mood band ("A world of quiet light.").
-5. **The House** — the Surat / Dholakia heritage.
-6. **Why grown** — three pillars on lab-grown diamonds.
+2. **Hero** — "A new definition of desire." (the Maya origin) over a parallax film.
+3. **The future, with a touch of magic** — the brand statement.
+4. **Atmosphere** — a full-bleed mood band ("Where the ordinary becomes extraordinary.").
+5. **Made for her** — the meaning was always hers.
+6. **What changed** — three pillars: Liberation, Artistry, Inclusivity.
 7. **The Craft** — the four-step journey from light to jewel.
-8. **The reveal** — a transition into the pieces.
-9. **The Collection** — Floracious, Lumen and Près du Cœur.
-10. **The line** — "We did not find this light. We made it."
-11. **Join the Circle** — a waitlist form with validation.
-12. **Footer**.
+8. **Expression** — a transition band ("…designed to mesmerise.").
+9. **The Mayavé way** — Craft · Experience · Expression.
+10. **Mayavérse** — the store locations (Noida, Ghaziabad, Gurugram).
+11. **The line** — "The future — with a touch of magic."
+12. **Join the Mayavérse** — a waitlist form with validation.
+13. **Footer**.
 
 ### Interactions
 

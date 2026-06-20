@@ -27,20 +27,20 @@ export default function Hero() {
         <div className={styles.copy}>
           <Logo tone="light" priority className={cx(styles.logo, styles.in1)} />
           <div className={cx(styles.kicker, styles.in2)}>
-            Lab-grown diamonds · Recycled 18K gold
+            Lab-grown diamonds · The future, with a touch of magic
           </div>
           <h1 className={cx(styles.title, styles.in3)}>
-            Light, made—
+            A new definition
             <br />
-            not mined.
+            of desire.
           </h1>
           <p className={cx(styles.lede, styles.in4)}>
-            A new house of conscious modern luxury, born in Surat. Diamonds
-            grown by hand, set in reclaimed gold — brilliance that asks nothing
-            of the earth it came from.
+            Mayavé takes its name from Maya — the Sanskrit idea of illusion,
+            transformation and unseen possibility. We make jewellery for a
+            generation that doesn’t ask permission to redefine luxury.
           </p>
           <JoinButton variant="white" className={styles.in5}>
-            Join the Circle
+            Request First Look
           </JoinButton>
         </div>
       </div>

@@ -13,7 +13,7 @@ interface JoinButtonProps {
   className?: string;
 }
 
-/** CTA button that smooth-scrolls to the Join the Circle section. */
+/** CTA button that smooth-scrolls to the Join the Mayavérse sign-up section. */
 export default function JoinButton({
   children,
   variant = "white",
