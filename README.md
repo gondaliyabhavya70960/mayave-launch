@@ -9,19 +9,18 @@ implemented from a Claude Design export with copy from the brand's Canva.
 
 A cinematic, scroll-driven one-pager:
 
-1. **Intro** — a full-screen cinematic wordmark shown once per session.
-2. **Hero** — "A new definition of desire." (the Maya origin) over a parallax film.
-3. **The future, with a touch of magic** — the brand statement.
-4. **Atmosphere** — a full-bleed mood band ("Where the ordinary becomes extraordinary.").
-5. **Made for her** — the meaning was always hers.
-6. **What changed** — three pillars: Liberation, Artistry, Inclusivity.
-7. **The Craft** — the four-step journey from light to jewel.
-8. **Expression** — a transition band ("…designed to mesmerise.").
-9. **The Mayavé way** — Craft · Experience · Expression.
-10. **Mayavérse** — the store locations (Noida, Ghaziabad, Gurugram).
-11. **The line** — "The future — with a touch of magic."
-12. **Join the Mayavérse** — a waitlist form with validation.
-13. **Footer**.
+1. **Hero** — "A new definition of desire." (the Maya origin) over a parallax film.
+2. **The future, with a touch of magic** — the brand statement.
+3. **Atmosphere** — a full-bleed mood band ("Where the ordinary becomes extraordinary.").
+4. **Made for her** — the meaning was always hers.
+5. **What changed** — three pillars: Liberation, Artistry, Inclusivity.
+6. **The Craft** — the four-step journey from light to jewel.
+7. **Expression** — a transition band ("…designed to mesmerise.").
+8. **The Mayavé way** — Craft · Experience · Expression.
+9. **Mayavérse** — the store locations (Noida, Ghaziabad, Gurugram).
+10. **The line** — "The future — with a touch of magic."
+11. **Join the Mayavérse** — a waitlist form with validation.
+12. **Footer**.
 
 ### Interactions
 

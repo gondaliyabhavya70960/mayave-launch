@@ -98,41 +98,6 @@ img {
 
 /* ---------- Keyframes ---------- */
 
-@keyframes mayIntroLine {
-  0% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-
-@keyframes mayIntroWord {
-  0% {
-    opacity: 0;
-    letter-spacing: 0.55em;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    letter-spacing: 0.24em;
-    transform: none;
-  }
-}
-
-@keyframes mayIntroSub {
-  0% {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  100% {
-    opacity: 0.8;
-    transform: none;
-  }
-}
-
 @keyframes mayFadeUp {
   0% {
     opacity: 0;
