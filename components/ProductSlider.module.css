@@ -6,9 +6,9 @@
   color: var(--ink);
 }
 
+/* Full-bleed: the slider spans the whole viewport (just the page gutter),
+   rather than being boxed inside the centred max-width column. */
 .inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
   padding-inline: var(--pad-x);
 }
 
