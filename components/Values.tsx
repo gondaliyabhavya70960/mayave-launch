@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
-import { cx } from "@/lib/cx";
 import iconDiamond from "@/assets/images/icon-diamond.png";
 import iconDesign from "@/assets/images/icon-design.png";
 import iconGem from "@/assets/images/icon-gem.png";
@@ -19,7 +18,7 @@ const values: { icon: StaticImageData; label: string }[] = [
 
 export default function Values() {
   return (
-    <section className={cx("may-section", styles.values)}>
+    <section className={styles.values}>
       <div className={styles.inner}>
         <Reveal>
           <div className="may-eyebrow">The Mayavé difference</div>

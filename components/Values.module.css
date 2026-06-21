@@ -1,5 +1,8 @@
 .values {
   background: var(--cream);
+  /* Compact band: modest top, tight bottom so it doesn't double up padding
+     with the Craft section that follows. */
+  padding: clamp(48px, 7vw, 84px) var(--pad-x) clamp(16px, 2.5vw, 32px);
 }
 
 .inner {
