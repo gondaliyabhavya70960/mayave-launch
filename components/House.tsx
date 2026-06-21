@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cx } from "@/lib/cx";
-import handImg from "@/assets/images/ring-on-hand.png";
+import handImg from "@/assets/images/ring-on-hand.jpg";
 import Reveal from "./Reveal";
 import styles from "./House.module.css";
 
@@ -8,7 +8,7 @@ export default function House() {
   return (
     <section id="about" className={cx("may-section", styles.house)}>
       <div className={styles.grid}>
-        <Reveal mask>
+        <Reveal direction="left">
           <div className={styles.frame}>
             <Image
               src={handImg}

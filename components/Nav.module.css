@@ -9,7 +9,13 @@
   transition:
     background 0.4s ease,
     color 0.4s ease,
-    border-color 0.4s ease;
+    border-color 0.4s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Auto-hide: slides out of view while scrolling down, back in on scroll up. */
+.hidden {
+  transform: translateY(-100%);
 }
 
 .solid {
