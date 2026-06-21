@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Cursor from "@/components/Cursor";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 const siteUrl =
@@ -75,6 +76,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <ScrollProgress />
         <Cursor />
       </body>
     </html>

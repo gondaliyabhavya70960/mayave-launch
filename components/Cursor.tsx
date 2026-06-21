@@ -22,39 +22,54 @@ function toneAt(el: Element | null): "dark" | "light" {
 }
 
 /**
- * A bird-shaped cursor that follows the mouse. It recolors itself white over
- * dark sections and ink over light ones, enlarges over links/buttons, and
+ * A bird-shaped cursor that follows the mouse with eased smoothing, trailed by
+ * a softer ring that lags a little further behind. It recolors itself white
+ * over dark sections and ink over light ones, swells over links/buttons, and
  * yields to the native caret over text fields. Only active on mouse devices.
  */
 export default function Cursor() {
-  const ref = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const birdRef = useRef<HTMLSpanElement>(null);
+  const ringRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const root = ref.current;
-    if (!root) return;
+    const root = rootRef.current;
+    const bird = birdRef.current;
+    const ring = ringRef.current;
+    if (!root || !bird || !ring) return;
     if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
     document.documentElement.classList.add("has-custom-cursor");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    let raf = 0;
-    let x = -100;
-    let y = -100;
+    let tx = -100;
+    let ty = -100;
+    let bx = -100;
+    let by = -100;
+    let rx = -100;
+    let ry = -100;
     let tone = "dark";
     let active = false;
     let textField = false;
     let shown = false;
+    let raf = 0;
 
-    const render = () => {
-      raf = 0;
-      root.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    const loop = () => {
+      const bf = reduce ? 1 : 0.3;
+      const rf = reduce ? 1 : 0.16;
+      bx += (tx - bx) * bf;
+      by += (ty - by) * bf;
+      rx += (tx - rx) * rf;
+      ry += (ty - ry) * rf;
+      bird.style.transform = `translate3d(${bx.toFixed(2)}px, ${by.toFixed(2)}px, 0)`;
+      ring.style.transform = `translate3d(${rx.toFixed(2)}px, ${ry.toFixed(2)}px, 0)`;
+      raf = requestAnimationFrame(loop);
     };
 
     const onMove = (e: MouseEvent) => {
-      x = e.clientX;
-      y = e.clientY;
-      if (!raf) raf = requestAnimationFrame(render);
-
-      const target = document.elementFromPoint(x, y);
+      tx = e.clientX;
+      ty = e.clientY;
+      const target = document.elementFromPoint(tx, ty);
 
       const isText = !!target?.closest("input, textarea");
       if (isText !== textField) {
@@ -87,6 +102,7 @@ export default function Cursor() {
 
     window.addEventListener("mousemove", onMove, { passive: true });
     document.addEventListener("mouseleave", onLeave);
+    raf = requestAnimationFrame(loop);
     return () => {
       window.removeEventListener("mousemove", onMove);
       document.removeEventListener("mouseleave", onLeave);
@@ -96,8 +112,13 @@ export default function Cursor() {
   }, []);
 
   return (
-    <div ref={ref} className={styles.cursor} data-tone="dark" aria-hidden="true">
-      <span className={styles.bird} />
+    <div ref={rootRef} className={styles.cursor} data-tone="dark" aria-hidden="true">
+      <span ref={ringRef} className={styles.ring}>
+        <span className={styles.ringShape} />
+      </span>
+      <span ref={birdRef} className={styles.bird}>
+        <span className={styles.birdShape} />
+      </span>
     </div>
   );
 }
