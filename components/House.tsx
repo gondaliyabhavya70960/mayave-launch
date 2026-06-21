@@ -8,7 +8,7 @@ export default function House() {
   return (
     <section id="about" className={cx("may-section", styles.house)}>
       <div className={styles.grid}>
-        <Reveal direction="left">
+        <Reveal mask>
           <div className={styles.frame}>
             <Image
               src={handImg}

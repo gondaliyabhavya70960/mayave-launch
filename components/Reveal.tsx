@@ -12,6 +12,8 @@ interface RevealProps {
   direction?: Direction;
   /** Stagger delay in milliseconds. */
   delay?: number;
+  /** Curtain-wipe (clip-path) reveal instead of fade/slide. Good for images. */
+  mask?: boolean;
   className?: string;
 }
 
@@ -24,6 +26,7 @@ export default function Reveal({
   children,
   direction = "up",
   delay = 0,
+  mask = false,
   className,
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -64,6 +67,7 @@ export default function Reveal({
         styles.reveal,
         direction === "left" && styles.left,
         direction === "right" && styles.right,
+        mask && styles.mask,
         visible && styles.visible,
         className,
       )}
