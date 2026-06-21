@@ -30,12 +30,11 @@ const products: Product[] = [
   { name: "Icarus", kind: "Necklace", tagline: "Flight, worn at the throat.", views: [necklace1, necklace2], bg: satin2 },
 ];
 
-const AUTOPLAY_MS = 7000;
+const AUTOPLAY_MS = 5000;
 
 export default function CollectionSlider() {
   const [active, setActive] = useState(0);
   const [view, setView] = useState(0);
-  const [paused, setPaused] = useState(false);
 
   const select = useCallback((i: number) => {
     setActive(((i % products.length) + products.length) % products.length);
@@ -44,14 +43,13 @@ export default function CollectionSlider() {
   const go = useCallback((dir: 1 | -1) => select(active + dir), [active, select]);
 
   useEffect(() => {
-    if (paused) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = setInterval(() => {
       setActive((a) => (a + 1) % products.length);
       setView(0);
     }, AUTOPLAY_MS);
     return () => clearInterval(t);
-  }, [paused, active]);
+  }, [active]);
 
   const current = products[active];
 
@@ -61,10 +59,6 @@ export default function CollectionSlider() {
       className={styles.slider}
       aria-roledescription="carousel"
       aria-label="The Winged Collection"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocusCapture={() => setPaused(true)}
-      onBlurCapture={() => setPaused(false)}
     >
       <div className={styles.bgs} aria-hidden="true">
         {products.map((p, i) => (

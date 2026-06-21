@@ -56,13 +56,21 @@ const icons = [
 /** Persistent shop nav — transparent over the hero, solid cream once scrolled. */
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     let raf = 0;
+    let lastY = window.scrollY || 0;
     const update = () => {
       raf = 0;
       const y = window.scrollY || window.pageYOffset;
       setScrolled(y > window.innerHeight * 0.85);
+      const delta = y - lastY;
+      // Ignore jitter; hide while scrolling down, reveal while scrolling up.
+      if (Math.abs(delta) > 6) {
+        setHidden(delta > 0 && y > 80);
+        lastY = y;
+      }
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
@@ -76,7 +84,9 @@ export default function Nav() {
   }, []);
 
   return (
-    <header className={cx(styles.nav, scrolled && styles.solid)}>
+    <header
+      className={cx(styles.nav, scrolled && styles.solid, hidden && styles.hidden)}
+    >
       <div className={styles.inner}>
         <a href="#top" className={styles.brand} aria-label="Mayavé — home">
           <Logo tone={scrolled ? "dark" : "light"} className={styles.logo} />
