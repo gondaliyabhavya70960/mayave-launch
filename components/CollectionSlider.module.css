@@ -88,13 +88,13 @@
 /* On large screens the pieces read better noticeably smaller. */
 @media (min-width: 1024px) {
   .jewel {
-    --jewel-scale: 0.64;
+    --jewel-scale: 0.576;
   }
   /* The brooch and necklace are visually larger pieces, so take them down
      a further 10%. */
   [data-kind="Brooch"] .jewel,
   [data-kind="Necklace"] .jewel {
-    --jewel-scale: 0.576;
+    --jewel-scale: 0.518;
   }
 }
 
