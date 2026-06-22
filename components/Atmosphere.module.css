@@ -18,12 +18,22 @@
 .wash {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(26, 18, 19, 0.45) 0%,
-    rgba(26, 18, 19, 0.15) 45%,
-    rgba(26, 18, 19, 0.6) 100%
-  );
+  /* Cinematic dark gradient: an edge vignette over a strong top/bottom
+     fade, keeping the jewel as the bright focal point while the petals
+     dissolve into shadow and the centred line stays legible. */
+  background:
+    radial-gradient(
+      125% 85% at 50% 48%,
+      rgba(16, 6, 9, 0) 24%,
+      rgba(16, 6, 9, 0.5) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(16, 6, 9, 0.62) 0%,
+      rgba(16, 6, 9, 0.18) 40%,
+      rgba(16, 6, 9, 0.22) 60%,
+      rgba(16, 6, 9, 0.74) 100%
+    );
 }
 
 .center {
@@ -43,5 +53,7 @@
   margin: 0;
   text-align: center;
   padding: 0 32px;
-  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+  text-shadow:
+    0 2px 30px rgba(0, 0, 0, 0.55),
+    0 1px 4px rgba(0, 0, 0, 0.45);
 }
