@@ -3,8 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
 import { cx } from "@/lib/cx";
-import satin1 from "@/assets/images/products/satin-1.png";
-import satin2 from "@/assets/images/products/satin-2.png";
+import satin from "@/assets/images/products/satin-2.png";
 import bangle1 from "@/assets/images/products/bangle-1.png";
 import bangle2 from "@/assets/images/products/bangle-2.png";
 import brooch1 from "@/assets/images/products/brooch-1.png";
@@ -20,14 +19,13 @@ type Product = {
   kind: string;
   tagline: string;
   views: [StaticImageData, StaticImageData];
-  bg: StaticImageData;
 };
 
 const products: Product[] = [
-  { name: "Plumage", kind: "Bangle", tagline: "A wrist, taken flight.", views: [bangle1, bangle2], bg: satin1 },
-  { name: "Seraph", kind: "Brooch", tagline: "Pinned mid-flight.", views: [brooch1, brooch2], bg: satin2 },
-  { name: "Volière", kind: "Earrings", tagline: "Wings, worn at the ear.", views: [earring1, earring2], bg: satin1 },
-  { name: "Icarus", kind: "Necklace", tagline: "Flight, worn at the throat.", views: [necklace1, necklace2], bg: satin2 },
+  { name: "Plumage", kind: "Bangle", tagline: "A wrist, taken flight.", views: [bangle1, bangle2] },
+  { name: "Seraph", kind: "Brooch", tagline: "Pinned mid-flight.", views: [brooch1, brooch2] },
+  { name: "Volière", kind: "Earrings", tagline: "Wings, worn at the ear.", views: [earring1, earring2] },
+  { name: "Icarus", kind: "Necklace", tagline: "Flight, worn at the throat.", views: [necklace1, necklace2] },
 ];
 
 const AUTOPLAY_MS = 5000;
@@ -61,18 +59,15 @@ export default function CollectionSlider() {
       aria-label="The Winged Collection"
     >
       <div className={styles.bgs} aria-hidden="true">
-        {products.map((p, i) => (
-          <Image
-            key={p.kind}
-            src={p.bg}
-            alt=""
-            fill
-            priority={i === 0}
-            placeholder="blur"
-            sizes="100vw"
-            className={cx(styles.bg, i === active && styles.bgOn)}
-          />
-        ))}
+        <Image
+          src={satin}
+          alt=""
+          fill
+          priority
+          placeholder="blur"
+          sizes="100vw"
+          className={styles.bgStatic}
+        />
       </div>
       <div className={styles.vignette} aria-hidden="true" />
 
