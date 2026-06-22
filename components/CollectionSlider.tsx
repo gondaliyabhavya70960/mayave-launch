@@ -75,6 +75,7 @@ export default function CollectionSlider() {
         {products.map((p, pi) => (
           <div
             key={p.kind}
+            data-kind={p.kind}
             className={cx(styles.product, pi === active && styles.productOn)}
             aria-hidden={pi !== active}
           >
