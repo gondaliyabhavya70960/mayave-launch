@@ -14,19 +14,10 @@
   z-index: 0;
 }
 
-.bg {
+/* One consistent satin backdrop for every piece; the >1 scale overscans so
+   no dark hairline shows at the edges. */
+.bgStatic {
   object-fit: cover;
-  opacity: 0;
-  /* stays >1 so the cover image always overscans and never leaves a dark
-     hairline at the edges */
-  transform: scale(1.12);
-  transition:
-    opacity 1.2s ease,
-    transform 8s ease-out;
-}
-
-.bgOn {
-  opacity: 1;
   transform: scale(1.04);
 }
 
@@ -77,10 +68,11 @@
 }
 
 .jewel {
+  --jewel-scale: 1;
   object-fit: contain;
   object-position: center 46%;
   opacity: 0;
-  transform: scale(1.07) translateY(10px);
+  transform: scale(calc(1.07 * var(--jewel-scale))) translateY(10px);
   /* spring-ish overshoot on entry */
   transition:
     opacity 0.8s ease,
@@ -90,7 +82,14 @@
 
 .jewelOn {
   opacity: 1;
-  transform: scale(1) translateY(0);
+  transform: scale(var(--jewel-scale)) translateY(0);
+}
+
+/* On large screens the pieces read better a touch smaller. */
+@media (min-width: 1024px) {
+  .jewel {
+    --jewel-scale: 0.8;
+  }
 }
 
 /* ---- overlay UI ---- */
@@ -281,7 +280,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bg,
   .jewel,
   .copy {
     transition-duration: 0.01ms;
