@@ -31,7 +31,11 @@ export default function Parallax({
       const vh = window.innerHeight;
       const rect = el.getBoundingClientRect();
       const center = rect.top + rect.height / 2 - vh / 2;
-      el.style.transform = `translate3d(0, ${(center * speed).toFixed(1)}px, 0)`;
+      // Clamp the shift so the layer never moves past its overscan and exposes
+      // the section's background colour as a hairline at the top/bottom edge.
+      const max = el.offsetHeight * 0.04;
+      const offset = Math.max(-max, Math.min(max, center * speed));
+      el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);

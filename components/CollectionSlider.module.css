@@ -17,7 +17,9 @@
 .bg {
   object-fit: cover;
   opacity: 0;
-  transform: scale(1.08);
+  /* stays >1 so the cover image always overscans and never leaves a dark
+     hairline at the edges */
+  transform: scale(1.12);
   transition:
     opacity 1.2s ease,
     transform 8s ease-out;
@@ -25,7 +27,7 @@
 
 .bgOn {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.04);
 }
 
 .vignette {
