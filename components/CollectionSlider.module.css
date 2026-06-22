@@ -90,6 +90,12 @@
   .jewel {
     --jewel-scale: 0.64;
   }
+  /* The brooch and necklace are visually larger pieces, so take them down
+     a further 10%. */
+  [data-kind="Brooch"] .jewel,
+  [data-kind="Necklace"] .jewel {
+    --jewel-scale: 0.576;
+  }
 }
 
 /* ---- overlay UI ---- */
