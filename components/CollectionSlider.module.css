@@ -85,10 +85,10 @@
   transform: scale(var(--jewel-scale)) translateY(0);
 }
 
-/* On large screens the pieces read better a touch smaller. */
+/* On large screens the pieces read better noticeably smaller. */
 @media (min-width: 1024px) {
   .jewel {
-    --jewel-scale: 0.8;
+    --jewel-scale: 0.64;
   }
 }
 
